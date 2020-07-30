@@ -1,15 +1,28 @@
 import React from 'react';
-import '../../Style/TopBanner.css'
-import Clock from '../Common/Clock.js'
+import  '../../Style/Common.css';
+import Clock from '../Common/Clock.js';
+import LoginWidget from './LoginWidget.js';
+class TopBanner extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="TopBanner">
+                <Clock />
 
-function TopBanner() {
-    return (<div className="TopBanner">
-        <h1 >Movie Presentation! </h1>
-        <Clock />
+                <h2 >Movie Presentation! </h2>
 
 
-    </div>)
+                <LoginWidget />
+
+
+            </div>)
+
+    }
 
 }
+
+
 
 export default TopBanner;

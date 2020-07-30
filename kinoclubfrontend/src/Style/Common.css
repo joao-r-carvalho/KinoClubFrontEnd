@@ -1,0 +1,30 @@
+/* #03254c
+    #1167b1
+    #187bcd
+    #2a9df4
+    #d0efff
+*/
+
+.KinoButton {
+    padding: 10px;
+    margin: 4px;
+    border-radius: 12px;
+    border: solid;
+    border-color: #03254c
+}
+
+.KinoButton-Main {
+    background-color: #187bcd;
+}
+
+
+.KinoButton-Secondary {
+    background-color: #d0efff;
+}
+
+
+.TopBanner {
+    background-color:     #2a9df4;
+    display: flex;
+    justify-content: space-between;
+}

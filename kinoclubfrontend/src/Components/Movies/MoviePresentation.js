@@ -50,18 +50,20 @@ class MoviePresentation extends React.Component {
                 <div>
 
                     <table>
-                        <tr>
-                            <td>
-                                <img src={this.state.isImageHidden ? Spoilers : this.state.MovieImageURL}
-                                    onClick={this.ToggleImage} >
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src={this.state.isImageHidden ? Spoilers : this.state.MovieImageURL}
+                                        onClick={this.ToggleImage} >
 
-                                </img>
-                            </td>
-                            <td rowspan='3'>
-                                <h1> {this.state.MovieTitle} </h1>
-                                <p>{this.state.MovieDescription}</p>
-                            </td>
-                        </tr>
+                                    </img>
+                                </td>
+                                <td rowSpan='3'>
+                                    <h1> {this.state.MovieTitle} </h1>
+                                    <p>{this.state.MovieDescription}</p>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             )
