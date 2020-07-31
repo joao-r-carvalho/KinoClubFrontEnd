@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7d50afd26a02ceeb0221eaa5d3c16f38",
+    "revision": "16c7dfbf012fec85af2c8c03625298c9",
     "url": "/KinoClubFrontEnd/index.html"
   },
   {
-    "revision": "0bdc9998b63a78f08ab4",
-    "url": "/KinoClubFrontEnd/static/css/main.6e0002c9.chunk.css"
+    "revision": "1dd0abadf47a51629da9",
+    "url": "/KinoClubFrontEnd/static/css/main.9ad4e841.chunk.css"
   },
   {
-    "revision": "b0e9938910d946002311",
-    "url": "/KinoClubFrontEnd/static/js/2.9b722e2c.chunk.js"
+    "revision": "a4c4505e8d60f50cbd51",
+    "url": "/KinoClubFrontEnd/static/js/2.2aab3b72.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/KinoClubFrontEnd/static/js/2.9b722e2c.chunk.js.LICENSE.txt"
+    "url": "/KinoClubFrontEnd/static/js/2.2aab3b72.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0bdc9998b63a78f08ab4",
-    "url": "/KinoClubFrontEnd/static/js/main.254cad95.chunk.js"
+    "revision": "1dd0abadf47a51629da9",
+    "url": "/KinoClubFrontEnd/static/js/main.3835df1d.chunk.js"
   },
   {
     "revision": "857954c525bedc2d495a",
