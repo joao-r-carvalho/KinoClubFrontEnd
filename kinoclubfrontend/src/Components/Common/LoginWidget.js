@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../Style/Common.css';
+import {Link} from 'react-router-dom'
 
 class LoginWidget extends React.Component {
     constructor(props) {
@@ -29,7 +30,8 @@ class LoginWidget extends React.Component {
                 <button onClick={this.handleLogoutClick} className="KinoButton KinoButton-Secondary">Logout</button></div>;
 
         } else {
-            body = <div><button onClick={this.handleLoginClick} className="KinoButton KinoButton-Main">Login</button>
+            body = <div>
+                <Link to="/Login" className="KinoButton KinoButton-Main" tag="button">Login</Link>
                 <button className="KinoButton KinoButton-Secondary">Signup</button></div>;
 
         }

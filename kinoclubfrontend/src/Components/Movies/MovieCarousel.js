@@ -18,9 +18,9 @@ class MovieCarousel extends React.Component {
 
         var Position = this.state.FirstItem + shift;
         if (Position < 0) {
-            Position = this.state.FilmsToFetch - 1
+            Position = this.state.MovieList.length - 1
         }
-        Position = Position % this.state.FilmsToFetch;
+        Position = Position % this.state.MovieList.length;
         this.setState({
             FirstItem: Position
         })
@@ -30,24 +30,19 @@ class MovieCarousel extends React.Component {
 
     componentDidMount() {
         var counter;
-        for (counter = 0; counter < this.state.FilmsToFetch; counter++) {
+        axios.get(properties.BaseURL + "/Movies/All")
+            .then(res => {
 
-            axios.get(properties.BaseURL + "/Movies/Random")
-                .then(res => {
-
-                    this.setState({
-                        MovieList: this.state.MovieList.concat(res.data)
-                    })
-                }, (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    })
-                }
-                )
-
-        }
-
+                this.setState({
+                    MovieList: res.data.map(x => JSON.parse(x))
+                })
+            }, (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                })
+            }
+            )
         this.setState({
             isLoaded: true
         })
@@ -55,13 +50,13 @@ class MovieCarousel extends React.Component {
     render() {
         if (this.state.isLoaded) {
             var BegginingPosition = this.state.FirstItem;
-            var FinalPosition = this.state.FirstItem + this.state.ToShow ; 
-            var Overflow = (FinalPosition - this.state.FilmsToFetch) ;
-            var MoviesToShow = this.state.MovieList.slice(BegginingPosition, Math.min(FinalPosition, this.state.FilmsToFetch ) ) ;
-            if(Overflow > 0){
+            var FinalPosition = this.state.FirstItem + this.state.ToShow;
+            var Overflow = (FinalPosition - this.state.MovieList.length);
+            var MoviesToShow = this.state.MovieList.slice(BegginingPosition, Math.min(FinalPosition, this.state.MovieList.length));
+            if (Overflow > 0) {
                 MoviesToShow = MoviesToShow.concat(this.state.MovieList.slice(0, Overflow))
             }
-            
+
             const innerDivs = MoviesToShow.map((Movie, index) =>
                 <div key={index} className='MovieBox'>
                     <img className='MoviePoster' src={Movie.Image}></img>

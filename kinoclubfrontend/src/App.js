@@ -1,15 +1,20 @@
 import React from 'react';
 import './Style/Common.css'
-import MoviePresentation from './Components/Movies/MoviePresentation.js';
 import './App.css';
 import TopBanner from './Components/Common/TopBanner'
-import MovieCarousel from './Components/Movies/MovieCarousel'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Pages/Home'
+import Login from './Pages/Authentication/Login'
 function App() {
   return (
-    <div className= "MainLayout">
-      <TopBanner/>
-      <MovieCarousel/>
-      <MoviePresentation />
+    <div className="MainLayout">
+      <Router>
+        <TopBanner />
+        <Switch>
+              <Route exact path='/' component={Home} /> 
+              <Route exact path='/Login' component={Login} /> 
+        </Switch>
+      </Router>
 
 
     </div>
