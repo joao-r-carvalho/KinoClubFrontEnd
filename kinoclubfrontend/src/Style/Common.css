@@ -28,3 +28,29 @@
     display: flex;
     justify-content: space-between;
 }
+
+.Flex{
+display: flex;
+align-items: center;
+justify-content: space-between;
+align-self: center;
+margin-left:100px;
+margin-right: 100px;
+margin-top: 20px;
+
+}
+.MovieBox{
+    background-color:     #d0efff;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+
+
+}
+.MoviePoster{
+    margin: 15px
+
+}

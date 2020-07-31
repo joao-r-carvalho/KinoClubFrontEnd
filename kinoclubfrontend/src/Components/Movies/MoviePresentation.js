@@ -1,7 +1,7 @@
 import React from 'react';
 import Spoilers from '../../Resources/Spoilers.jpg'
 import axios from 'axios';
-
+import { properties } from '../../Properties.js'
 class MoviePresentation extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ class MoviePresentation extends React.Component {
 
     }
     componentDidMount() {
-        axios.get("https://kinoclub-1595860726231.azurewebsites.net/Movies/Random")
+        axios.get(properties.BaseURL + "/Movies/Random")
             .then(res => {
                 this.setState({
                     isLoaded: true,
