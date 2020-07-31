@@ -13,7 +13,8 @@ class TopBanner extends React.Component {
             <div className="TopBanner">
                 
                 <Clock />
-                <Link to='/'>Home</Link>
+                <Link to={process.env.PUBLIC_URL + '/'}>Home</Link>
+                
 
                 <h2 >Movie Presentation! </h2>
 

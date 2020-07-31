@@ -11,8 +11,9 @@ function App() {
       <Router>
         <TopBanner />
         <Switch>
-              <Route exact path='/' component={Home} /> 
-              <Route exact path='/Login' component={Login} /> 
+              <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} /> 
+              <Route exact path={process.env.PUBLIC_URL + '/KinoClubFrontend'} component={Home} /> 
+              <Route exact path={process.env.PUBLIC_URL + '/Login'} component={Login} /> 
         </Switch>
       </Router>
 

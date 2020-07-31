@@ -31,7 +31,7 @@ class LoginWidget extends React.Component {
 
         } else {
             body = <div>
-                <Link to="/Login" className="KinoButton KinoButton-Main" tag="button">Login</Link>
+                <Link to={process.env.PUBLIC_URL + '/Login'} className="KinoButton KinoButton-Main" tag="button">Login</Link>
                 <button className="KinoButton KinoButton-Secondary">Signup</button></div>;
 
         }
