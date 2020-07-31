@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/KinoClubFrontEnd/static/css/main.9ad4e841.chunk.css",
-    "main.js": "/KinoClubFrontEnd/static/js/main.3835df1d.chunk.js",
-    "main.js.map": "/KinoClubFrontEnd/static/js/main.3835df1d.chunk.js.map",
+    "main.js": "/KinoClubFrontEnd/static/js/main.f0091dc1.chunk.js",
+    "main.js.map": "/KinoClubFrontEnd/static/js/main.f0091dc1.chunk.js.map",
     "runtime-main.js": "/KinoClubFrontEnd/static/js/runtime-main.d02cb81c.js",
     "runtime-main.js.map": "/KinoClubFrontEnd/static/js/runtime-main.d02cb81c.js.map",
-    "static/js/2.2aab3b72.chunk.js": "/KinoClubFrontEnd/static/js/2.2aab3b72.chunk.js",
-    "static/js/2.2aab3b72.chunk.js.map": "/KinoClubFrontEnd/static/js/2.2aab3b72.chunk.js.map",
+    "static/js/2.9154e7a3.chunk.js": "/KinoClubFrontEnd/static/js/2.9154e7a3.chunk.js",
+    "static/js/2.9154e7a3.chunk.js.map": "/KinoClubFrontEnd/static/js/2.9154e7a3.chunk.js.map",
     "index.html": "/KinoClubFrontEnd/index.html",
-    "precache-manifest.e5ecca21c9508d5630ebff25dfee76a3.js": "/KinoClubFrontEnd/precache-manifest.e5ecca21c9508d5630ebff25dfee76a3.js",
+    "precache-manifest.2e6cd17bffe846aeae528632193d8b30.js": "/KinoClubFrontEnd/precache-manifest.2e6cd17bffe846aeae528632193d8b30.js",
     "service-worker.js": "/KinoClubFrontEnd/service-worker.js",
     "static/css/main.9ad4e841.chunk.css.map": "/KinoClubFrontEnd/static/css/main.9ad4e841.chunk.css.map",
-    "static/js/2.2aab3b72.chunk.js.LICENSE.txt": "/KinoClubFrontEnd/static/js/2.2aab3b72.chunk.js.LICENSE.txt",
+    "static/js/2.9154e7a3.chunk.js.LICENSE.txt": "/KinoClubFrontEnd/static/js/2.9154e7a3.chunk.js.LICENSE.txt",
     "static/media/Spoilers.jpg": "/KinoClubFrontEnd/static/media/Spoilers.0b7f3581.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d02cb81c.js",
-    "static/js/2.2aab3b72.chunk.js",
+    "static/js/2.9154e7a3.chunk.js",
     "static/css/main.9ad4e841.chunk.css",
-    "static/js/main.3835df1d.chunk.js"
+    "static/js/main.f0091dc1.chunk.js"
   ]
 }
