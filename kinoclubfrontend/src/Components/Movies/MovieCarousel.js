@@ -64,9 +64,9 @@ class MovieCarousel extends React.Component {
 
             )
             return <div className='Flex'>
-                <button onClick={() => this.handleCarrouselShift(-1)} className="KinoButton KinoButton-Main"></button>
-                {innerDivs}
                 <button onClick={() => this.handleCarrouselShift(1)} className="KinoButton KinoButton-Main"></button>
+                {innerDivs}
+                <button onClick={() => this.handleCarrouselShift(-1)} className="KinoButton KinoButton-Main"></button>
             </div>
 
 
