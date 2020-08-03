@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/KinoClubFrontEnd/precache-manifest.95a6c45fbee49f2d8e5d24e52aa95c4f.js"
+  "/KinoClubFrontEnd/precache-manifest.838e41de394d9ab9b322d9a841a7d135.js"
 );
 
 self.addEventListener('message', (event) => {
