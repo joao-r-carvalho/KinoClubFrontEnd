@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { properties } from '../../Properties'
 import '../../Style/Common.css'
+import { Link } from 'react-router-dom'
+
 class MovieCarousel extends React.Component {
     constructor(props) {
         super(props);
@@ -59,7 +61,8 @@ class MovieCarousel extends React.Component {
 
             const innerDivs = MoviesToShow.map((Movie, index) =>
                 <div key={index} className='MovieBox'>
-                    <img className='MoviePoster' src={Movie.Image}></img>
+                    <Link to={process.env.PUBLIC_URL + '/MovieHero/' + Movie._id.$oid} tag="div">
+                        <img className='MoviePoster' src={Movie.Image}></img></Link>
                 </div>
 
             )

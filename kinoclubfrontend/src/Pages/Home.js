@@ -8,7 +8,6 @@ function Home() {
         <div className="MainLayout">
 
             <MovieCarousel />
-            <MoviePresentation />
 
 
         </div>

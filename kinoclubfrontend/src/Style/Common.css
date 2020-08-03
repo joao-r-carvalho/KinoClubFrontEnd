@@ -9,8 +9,12 @@
     padding: 10px;
     margin: 4px;
     border-radius: 12px;
-    border: solid;
+    border: solid 2px;
     border-color: #03254c
+}
+
+.KinoButton:hover {
+    background-color: white;
 }
 
 .KinoButton-Main {
@@ -24,23 +28,24 @@
 
 
 .TopBanner {
-    background-color:     #2a9df4;
+    background-color: #d0efff;
     display: flex;
     justify-content: space-between;
 }
 
-.Flex{
-display: flex;
-align-items: center;
-justify-content: space-between;
-align-self: center;
-margin-left:100px;
-margin-right: 100px;
-margin-top: 20px;
+.Flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
 
 }
-.MovieBox{
-    background-color:     #d0efff;
+
+.MovieBox {
+    background-color: #d0efff;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 15px;
@@ -50,7 +55,27 @@ margin-top: 20px;
 
 
 }
-.MoviePoster{
-    margin: 15px
+
+.MoviePoster {
+    margin: 15px;
+    width: 337.5x;
+    height: 500px;
+    transition-property: height;
+    transition-duration: 2s;
+    transition-delay: 0
+}
+
+.MoviePoster:hover {
+    height: 520px
+}
+
+.BottomBanner {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d0efff;
+    text-align: center;
+
 
 }

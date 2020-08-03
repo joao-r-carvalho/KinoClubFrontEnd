@@ -17,7 +17,12 @@ class MoviePresentation extends React.Component {
 
     }
     componentDidMount() {
-        axios.get(properties.BaseURL + "/Movies/Random")
+
+
+        var AccessURL = properties.BaseURL + "/Movies/" + (this.props.MovieId == "" ? "Random" : this.props.MovieId);
+
+
+        axios.get(AccessURL)
             .then(res => {
                 this.setState({
                     isLoaded: true,
@@ -48,7 +53,6 @@ class MoviePresentation extends React.Component {
         } else {
             return (
                 <div>
-
                     <table>
                         <tbody>
                             <tr>
