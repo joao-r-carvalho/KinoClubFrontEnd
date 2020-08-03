@@ -31,25 +31,29 @@
     background-color: #d0efff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #187bcd;
 }
 
 .Flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-self: center;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
 
 }
 
 .MovieBox {
-    background-color: #d0efff;
-    margin-left: 10px;
-    margin-right: 10px;
+    background: rgb(0, 212, 255);
+    background: radial-gradient(circle, rgba(0, 212, 255, 1) 2%, rgba(43, 43, 255, 0.6842087176667542) 79%);
     padding-left: 15px;
     padding-right: 15px;
+    border: 2px solid #187bcd;
+    margin: 2%;
     display: flex;
     align-items: center;
 
@@ -61,7 +65,7 @@
     width: 337.5x;
     height: 500px;
     transition-property: height;
-    transition-duration: 2s;
+    transition-duration: 1s;
     transition-delay: 0
 }
 
@@ -75,7 +79,9 @@
     bottom: 0;
     width: 100%;
     background-color: #d0efff;
-    text-align: center;
+    display:flex;
+    align-items: right;
 
 
 }
+

@@ -3,6 +3,7 @@ import  '../../Style/Common.css';
 import Clock from '../Common/Clock.js';
 import LoginWidget from './LoginWidget.js';
 import {Link} from 'react-router-dom'
+import Film from '../../Resources/film.svg'
 
 class TopBanner extends React.Component {
     constructor(props) {
@@ -12,11 +13,9 @@ class TopBanner extends React.Component {
         return (
             <div className="TopBanner">
                 
-                <Clock />
-                <Link to={process.env.PUBLIC_URL + '/'}>Home</Link>
+                <Link className="Flex" to={process.env.PUBLIC_URL + '/'}><img className="HomeIcon" src={Film}></img></Link>
                 
 
-                <h2 >Movie Presentation! </h2>
 
 
                 <LoginWidget />

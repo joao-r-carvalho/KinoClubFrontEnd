@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../Style/Common.css';
+import Clock from './Clock';
 class BottomBanner extends React.Component {
     constructor(props) {
         super(props);
@@ -7,7 +8,9 @@ class BottomBanner extends React.Component {
 
     render() {
         return (
-            <div className='BottomBanner'> Footer </div>)
+            <div className='BottomBanner'>
+                <Clock id="BottomClock" />
+            </div>)
     }
 
 }
