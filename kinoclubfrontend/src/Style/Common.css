@@ -7,23 +7,27 @@
 
 .KinoButton {
     padding: 10px;
-    margin: 4px;
-    border-radius: 12px;
-    border: solid 2px;
-    border-color: #03254c
+    margin: 10px;
+    border-radius: 10px;
+    border-bottom: solid 2px;
+    font-size: 100%;
+    text-decoration: none;
 }
 
-.KinoButton:hover {
-    background-color: white;
-}
 
 .KinoButton-Main {
-    background-color: #187bcd;
+    background-color: white;
 }
 
 
 .KinoButton-Secondary {
-    background-color: #d0efff;
+    background-color: white;
+}
+
+.KinoButton:hover {
+    background-color: #187bcd;
+    color: white;
+    border-color: #187bcd;
 }
 
 
@@ -32,7 +36,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #187bcd;
+    box-shadow: 0px 2px 10px 1px #187bcd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .Flex {
@@ -56,17 +64,17 @@
     margin: 2%;
     display: flex;
     align-items: center;
-
-
+    box-shadow: 0px 5px 8px 0px #858585;
+    border-radius: 5px;
 }
 
 .MoviePoster {
     margin: 15px;
-    width: 337.5x;
+    width: 337.5px;
     height: 500px;
     transition-property: height;
     transition-duration: 1s;
-    transition-delay: 0
+    transition-delay: 0;
 }
 
 .MoviePoster:hover {
