@@ -36,7 +36,7 @@ class MovieCarousel extends React.Component {
             .then(res => {
 
                 this.setState({
-                    MovieList: res.data.map(x => JSON.parse(x))
+                    MovieList: res.data
                 })
             }, (error) => {
                 this.setState({
@@ -61,7 +61,7 @@ class MovieCarousel extends React.Component {
 
             const innerDivs = MoviesToShow.map((Movie, index) =>
                 <div key={index} className='MovieBox'>
-                    <Link to={process.env.PUBLIC_URL + '/MovieHero/' + Movie._id.$oid} tag="div">
+                    <Link to={process.env.PUBLIC_URL + '/MovieHero/' + Movie.MovieIdentifier} tag="div">
                         <img className='MoviePoster' src={Movie.Image}></img></Link>
                 </div>
 
