@@ -36,8 +36,8 @@ class LoginForm extends React.Component {
             if (response.status == 401) {
                 this.setState({ passwordFailed: true })
             } else if (response.state == 200) {
-                loginSuccessful =true;
-                
+                this.setState({loginSuccessful :true})
+
             }
         });
 
