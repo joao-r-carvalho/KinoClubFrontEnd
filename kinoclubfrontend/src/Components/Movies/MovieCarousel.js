@@ -3,7 +3,7 @@ import axios from 'axios';
 import { properties } from '../../Properties'
 import '../../Style/Common.css'
 import { Link } from 'react-router-dom'
-
+import {Image} from 'react-bootstrap'
 class MovieCarousel extends React.Component {
     constructor(props) {
         super(props);
@@ -62,7 +62,7 @@ class MovieCarousel extends React.Component {
             const innerDivs = MoviesToShow.map((Movie, index) =>
                 <div key={index} className='MovieBox'>
                     <Link to={process.env.PUBLIC_URL + '/MovieHero/' + Movie.MovieIdentifier} tag="div">
-                        <img className='MoviePoster' src={Movie.Image}></img></Link>
+                        <Image className='MoviePoster' src={Movie.Image} rounded /></Link>
                 </div>
 
             )

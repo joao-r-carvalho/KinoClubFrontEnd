@@ -1,7 +1,6 @@
 import React from 'react';
 import { properties } from '../../Properties.js'
-import { Redirect } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -10,7 +9,7 @@ class LoginForm extends React.Component {
             username: ''
             , password: ''
             , passwordFailed: false
-            , loginSuccessful : false,
+            , loginSuccessful: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -36,7 +35,7 @@ class LoginForm extends React.Component {
             if (response.status == 401) {
                 this.setState({ passwordFailed: true })
             } else if (response.state == 200) {
-                this.setState({loginSuccessful :true})
+                this.setState({ loginSuccessful: true })
 
             }
         });
@@ -51,19 +50,21 @@ class LoginForm extends React.Component {
 
 
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Username:
-            <input type="text" value={this.state.value} name="username" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Password:
-            <input type="password" value={this.state.value} name="password" onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Submit" />
-                <br />
-                {error}
-            </form>
+
+            <Form onSubmit={this.handleSubmit}>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" name="username" placeholder="Enter Username" onChange={this.handleChange} />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" name="password" placeholder="Enter Password" onChange={this.handleChange} />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Login
+                </Button>
+            </Form>
         );
     }
 };

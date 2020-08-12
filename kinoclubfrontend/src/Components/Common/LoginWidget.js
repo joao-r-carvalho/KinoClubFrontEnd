@@ -22,6 +22,7 @@ class LoginWidget extends React.Component {
             isLoggedIn: false
         })
     }
+    componentDidMount
     render() {
         let body;
 
@@ -33,7 +34,6 @@ class LoginWidget extends React.Component {
             body = <div>
                 <Link to={process.env.PUBLIC_URL + '/Login'} className="KinoButton KinoButton-Main" tag="button">Login</Link>
                 <Link className="KinoButton KinoButton-Secondary">Register</Link></div>;
-
         }
 
         return (

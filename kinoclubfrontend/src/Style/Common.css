@@ -4,7 +4,38 @@
     #2a9df4
     #d0efff
 */
+.LoginPage{
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
 
+.Clickable:hover{
+    cursor: pointer;
+}
+.MainBody{
+display:flex;
+flex-direction: row;
+justify-items: center;
+
+}
+.AddToFavorites,
+.MoviePresentationContainer{
+    display:flex;
+    direction:row;   
+    align-items:center; 
+    margin-top:1%;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    margin-bottom:1%;
+}
+.MoviePresentationLeft{
+ margin-right:2%
+}
+.MoviePresentationRight{
+    flex-grow: 5;
+    
+}
 .KinoButton {
     padding: 10px;
     margin: 10px;
@@ -29,18 +60,21 @@
     color: white;
     border-color: #187bcd;
 }
-
+.h2{
+    
+}
 
 .TopBanner {
     background-color: #d0efff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 10px 1px #187bcd;
+    box-shadow: 0px 2px 10px 1px #9d9fa0;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 5%;
     padding-left: 5%;
+    margin-bottom: 2%;
 }
 
 .Flex {
