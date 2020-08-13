@@ -13,6 +13,7 @@ class LoginWidget extends React.Component {
         this.state = {
             isLoggedIn: false,
             isLoaded: false,
+            Name: "",
             isMale: true
         }
     }
@@ -24,6 +25,8 @@ class LoginWidget extends React.Component {
         })
     }
     componentDidMount() {
+        this.ProfilePooling();
+
         this.timerID = setInterval(
             () => this.ProfilePooling(),
             5000
@@ -46,10 +49,9 @@ class LoginWidget extends React.Component {
                 else {
                     response.json()
                         .then(res => {
-                            alert(JSON.stringify(res));
-
                             this.setState({
-                                isLoggedIn: true
+                                isLoggedIn: true,
+                                Name: res.user.Name
                             });
                             this.timerID = null;
                         }
@@ -76,8 +78,10 @@ class LoginWidget extends React.Component {
                 {this.state.isMale ? <FcBusinessman size={48}> </FcBusinessman>
                     : <FcBusinesswoman size={48}> </FcBusinesswoman>
                 }
-                <span>Logged in as : </span>
-                <button onClick={this.handleLogoutClick} className="KinoButton KinoButton-Secondary">Logout</button></div>;
+                <span>Welcome {this.state.Name} </span>
+                <Link onClick={this.handleLogoutClick} to={process.env.PUBLIC_URL + '/KinoClubFrontEnd'} className="KinoButton KinoButton-Main" tag="button">Logout</Link>
+
+            </div>;
 
         } else {
             body = <div>
