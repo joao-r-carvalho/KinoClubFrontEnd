@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/KinoClubFrontEnd/static/css/main.611a8148.chunk.css",
-    "main.js": "/KinoClubFrontEnd/static/js/main.8227ddc3.chunk.js",
-    "main.js.map": "/KinoClubFrontEnd/static/js/main.8227ddc3.chunk.js.map",
+    "main.js": "/KinoClubFrontEnd/static/js/main.839bf48e.chunk.js",
+    "main.js.map": "/KinoClubFrontEnd/static/js/main.839bf48e.chunk.js.map",
     "runtime-main.js": "/KinoClubFrontEnd/static/js/runtime-main.d02cb81c.js",
     "runtime-main.js.map": "/KinoClubFrontEnd/static/js/runtime-main.d02cb81c.js.map",
-    "static/js/2.c4bbad5d.chunk.js": "/KinoClubFrontEnd/static/js/2.c4bbad5d.chunk.js",
-    "static/js/2.c4bbad5d.chunk.js.map": "/KinoClubFrontEnd/static/js/2.c4bbad5d.chunk.js.map",
+    "static/js/2.ed3b5fa5.chunk.js": "/KinoClubFrontEnd/static/js/2.ed3b5fa5.chunk.js",
+    "static/js/2.ed3b5fa5.chunk.js.map": "/KinoClubFrontEnd/static/js/2.ed3b5fa5.chunk.js.map",
     "index.html": "/KinoClubFrontEnd/index.html",
-    "precache-manifest.d590ba2bdbefdc5ee45f82195e4b89b4.js": "/KinoClubFrontEnd/precache-manifest.d590ba2bdbefdc5ee45f82195e4b89b4.js",
+    "precache-manifest.e08307b0e9138c29c2d2d0500c429fbb.js": "/KinoClubFrontEnd/precache-manifest.e08307b0e9138c29c2d2d0500c429fbb.js",
     "service-worker.js": "/KinoClubFrontEnd/service-worker.js",
     "static/css/main.611a8148.chunk.css.map": "/KinoClubFrontEnd/static/css/main.611a8148.chunk.css.map",
-    "static/js/2.c4bbad5d.chunk.js.LICENSE.txt": "/KinoClubFrontEnd/static/js/2.c4bbad5d.chunk.js.LICENSE.txt",
+    "static/js/2.ed3b5fa5.chunk.js.LICENSE.txt": "/KinoClubFrontEnd/static/js/2.ed3b5fa5.chunk.js.LICENSE.txt",
     "static/media/clacker.png": "/KinoClubFrontEnd/static/media/clacker.a90a4f57.png",
     "static/media/film.svg": "/KinoClubFrontEnd/static/media/film.5e57d8a2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d02cb81c.js",
-    "static/js/2.c4bbad5d.chunk.js",
+    "static/js/2.ed3b5fa5.chunk.js",
     "static/css/main.611a8148.chunk.css",
-    "static/js/main.8227ddc3.chunk.js"
+    "static/js/main.839bf48e.chunk.js"
   ]
 }
