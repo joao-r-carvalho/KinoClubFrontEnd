@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/KinoClubFrontEnd/static/css/main.a53f8018.chunk.css",
-    "main.js": "/KinoClubFrontEnd/static/js/main.7410d468.chunk.js",
-    "main.js.map": "/KinoClubFrontEnd/static/js/main.7410d468.chunk.js.map",
+    "main.css": "/KinoClubFrontEnd/static/css/main.611a8148.chunk.css",
+    "main.js": "/KinoClubFrontEnd/static/js/main.6f04dbb9.chunk.js",
+    "main.js.map": "/KinoClubFrontEnd/static/js/main.6f04dbb9.chunk.js.map",
     "runtime-main.js": "/KinoClubFrontEnd/static/js/runtime-main.d02cb81c.js",
     "runtime-main.js.map": "/KinoClubFrontEnd/static/js/runtime-main.d02cb81c.js.map",
-    "static/js/2.c419cd44.chunk.js": "/KinoClubFrontEnd/static/js/2.c419cd44.chunk.js",
-    "static/js/2.c419cd44.chunk.js.map": "/KinoClubFrontEnd/static/js/2.c419cd44.chunk.js.map",
+    "static/js/2.fe412270.chunk.js": "/KinoClubFrontEnd/static/js/2.fe412270.chunk.js",
+    "static/js/2.fe412270.chunk.js.map": "/KinoClubFrontEnd/static/js/2.fe412270.chunk.js.map",
     "index.html": "/KinoClubFrontEnd/index.html",
-    "precache-manifest.4c09343f651047e5fc2a3c7cebc1bc43.js": "/KinoClubFrontEnd/precache-manifest.4c09343f651047e5fc2a3c7cebc1bc43.js",
+    "precache-manifest.7b309f9e501870ae1ff6f5494b417b16.js": "/KinoClubFrontEnd/precache-manifest.7b309f9e501870ae1ff6f5494b417b16.js",
     "service-worker.js": "/KinoClubFrontEnd/service-worker.js",
-    "static/css/main.a53f8018.chunk.css.map": "/KinoClubFrontEnd/static/css/main.a53f8018.chunk.css.map",
-    "static/js/2.c419cd44.chunk.js.LICENSE.txt": "/KinoClubFrontEnd/static/js/2.c419cd44.chunk.js.LICENSE.txt",
+    "static/css/main.611a8148.chunk.css.map": "/KinoClubFrontEnd/static/css/main.611a8148.chunk.css.map",
+    "static/js/2.fe412270.chunk.js.LICENSE.txt": "/KinoClubFrontEnd/static/js/2.fe412270.chunk.js.LICENSE.txt",
     "static/media/clacker.png": "/KinoClubFrontEnd/static/media/clacker.a90a4f57.png",
     "static/media/film.svg": "/KinoClubFrontEnd/static/media/film.5e57d8a2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d02cb81c.js",
-    "static/js/2.c419cd44.chunk.js",
-    "static/css/main.a53f8018.chunk.css",
-    "static/js/main.7410d468.chunk.js"
+    "static/js/2.fe412270.chunk.js",
+    "static/css/main.611a8148.chunk.css",
+    "static/js/main.6f04dbb9.chunk.js"
   ]
 }
