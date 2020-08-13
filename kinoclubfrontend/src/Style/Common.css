@@ -13,12 +13,11 @@
 .Clickable:hover{
     cursor: pointer;
 }
-.MainBody{
-display:flex;
-flex-direction: row;
-justify-items: center;
+.Home{
 
+    text-align: center;
 }
+ 
 .AddToFavorites,
 .MoviePresentationContainer{
     display:flex;
@@ -36,6 +35,7 @@ justify-items: center;
     flex-grow: 5;
     
 }
+
 .KinoButton {
     padding: 10px;
     margin: 10px;

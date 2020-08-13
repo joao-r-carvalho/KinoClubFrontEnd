@@ -18,7 +18,7 @@ class Login extends React.Component {
             <br/>
             <LoginForm />
             <br/>
-            <Link className="Clickable" to={process.env.PUBLIC_URL + '/Register'} >Still don't have an account? Sign up here!</Link>
+            <Link className="Clickable" to={process.env.PUBLIC_URL + '/Register'} >Don't have an account yet? Sign up here!</Link>
 
         </div>)
 
