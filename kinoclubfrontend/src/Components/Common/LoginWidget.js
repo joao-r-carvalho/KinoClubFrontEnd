@@ -79,7 +79,9 @@ class LoginWidget extends React.Component {
                 {this.state.isMale ? <FcBusinessman size={48}> </FcBusinessman>
                     : <FcBusinesswoman size={48}> </FcBusinesswoman>
                 }
-                <span>Welcome {this.state.Name} </span>
+                <span>Welcome <Link to={process.env.PUBLIC_URL + '/Profile'} > {this.state.Name}
+                </Link></span>
+
                 <Link onClick={this.handleLogoutClick} to={process.env.PUBLIC_URL + '/KinoClubFrontEnd'} className="KinoButton KinoButton-Main" tag="button">Logout</Link>
 
             </div>;
