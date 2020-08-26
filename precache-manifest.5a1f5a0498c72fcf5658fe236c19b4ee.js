@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1ff6067775d882fb423c350781a21e97",
+    "revision": "22095a36078045ab8b123cb98890e7d3",
     "url": "/KinoClubFrontEnd/index.html"
   },
   {
-    "revision": "3dd51a66b4aaf0a54e32",
+    "revision": "62bcfb240881e65eab08",
     "url": "/KinoClubFrontEnd/static/css/main.5e5d585f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/KinoClubFrontEnd/static/js/2.30da7d5d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3dd51a66b4aaf0a54e32",
-    "url": "/KinoClubFrontEnd/static/js/main.b9ca18e1.chunk.js"
+    "revision": "62bcfb240881e65eab08",
+    "url": "/KinoClubFrontEnd/static/js/main.238ede78.chunk.js"
   },
   {
     "revision": "857954c525bedc2d495a",
