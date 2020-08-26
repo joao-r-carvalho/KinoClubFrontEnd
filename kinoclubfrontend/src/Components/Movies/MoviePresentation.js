@@ -15,7 +15,7 @@ class MoviePresentation extends React.Component {
             IsFavorite: false,
             MovieIdentifier: this.props.MovieId
         }
-        this.addToFavorites = this.addToFavorites.bind(this);
+        this.ToggleFavoriteStatus = this.ToggleFavoriteStatus.bind(this);
 
     }
     componentDidMount() {
@@ -38,11 +38,28 @@ class MoviePresentation extends React.Component {
             )
 
     }
-    addToFavorites() {
+    ToggleFavoriteStatus() {
         // alert((this.state.isFavorite? "Removing":  "Adding"  )+ this.state.MovieIdentifier +  " To your favorites") ;
-        this.setState(state => ({
-            IsFavorite: !this.state.IsFavorite
-        }))
+        fetch(properties.BaseURL + '/' +properties.SetFavoriteMovieURL, {
+            method: 'POST',
+            credentials: 'include',
+
+            headers: {
+                'Accept': '*/*',
+                'Content-Type': 'application/json',
+            }, body: JSON.stringify({
+                "MovieIdentifier": this.state.MovieIdentifier
+            })
+        }).then((response) => {
+            if (response.status == 401) {
+                this.setState({ error: "Please login first" })
+            } else if (response.state == 200) {
+                this.setState(state => ({
+                    IsFavorite: true
+                }))
+            }
+        });
+
 
     }
 
@@ -58,7 +75,7 @@ class MoviePresentation extends React.Component {
                     <div className="MoviePresentationLeft">
                         <img src={this.state.MovieImageURL} >
                         </img>
-                        <div onClick={this.addToFavorites} className="AddToFavorites Clickable" >
+                        <div onClick={this.ToggleFavoriteStatus} className="AddToFavorites Clickable" >
                             {this.state.IsFavorite ?
                                 <React.Fragment>
                                     <AiFillStar size={32} color="gold" />

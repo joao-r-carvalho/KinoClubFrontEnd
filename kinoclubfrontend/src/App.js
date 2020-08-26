@@ -8,6 +8,7 @@ import Login from './Pages/Authentication/Login'
 import BottomBanner from './Components/Common/BottomBanner';
 import MovieHero from './Pages/Movies/MovieHero';
 import RegisterForm from './Components/Forms/RegisterForm';
+import UserInformation from './Components/Users/UserInformation';
 function App() {
   return (
     <div className="MainLayout">
@@ -19,6 +20,8 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/MovieHero/:MovieId'} component={MovieHero} /> 
               <Route exact path={process.env.PUBLIC_URL + '/Login'} component={Login} /> 
               <Route exact path={process.env.PUBLIC_URL + '/Register'} component={RegisterForm} /> 
+              <Route exact path={process.env.PUBLIC_URL + '/Profile'} component={UserInformation} /> 
+
         </Switch>
         <BottomBanner/>
       </Router>

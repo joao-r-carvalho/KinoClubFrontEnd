@@ -51,7 +51,8 @@ class LoginWidget extends React.Component {
                         .then(res => {
                             this.setState({
                                 isLoggedIn: true,
-                                Name: res.user.Name
+                                Name: res.user.Name,
+                                isMale: res.user.Gender == "Male"
                             });
                             this.timerID = null;
                         }
