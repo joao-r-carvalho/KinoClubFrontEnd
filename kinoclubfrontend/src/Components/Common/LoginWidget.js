@@ -3,6 +3,7 @@ import '../../Style/Common.css';
 import { Link } from 'react-router-dom'
 import { properties } from '../../Properties.js'
 import { FcBusinessman, FcBusinesswoman } from 'react-icons/fc'
+import { Logout } from '../../Services/API/Authentication'
 import axios from 'axios'
 
 class LoginWidget extends React.Component {
@@ -20,9 +21,11 @@ class LoginWidget extends React.Component {
 
 
     handleLogoutClick() {
-        this.setState({
-            isLoggedIn: false
-        })
+        Logout().then(
+            this.setState({
+                isLoggedIn: false
+            })
+        )
     }
     componentDidMount() {
         this.ProfilePooling();

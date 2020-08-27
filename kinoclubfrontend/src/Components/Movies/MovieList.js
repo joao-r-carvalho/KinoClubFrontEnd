@@ -13,11 +13,11 @@ class MovieList extends React.Component {
                 <table align="center" class="table">
 
                     {this.props.MovieList.map((item, index) => {
-                        return (<Link to={process.env.PUBLIC_URL + '/MovieHero/' + item.MovieIdentifier}  >
-                            <tr><td>
+                        return (
+                            <tr><Link to={process.env.PUBLIC_URL + '/MovieHero/' + item.MovieIdentifier}  ><td>
                                 <img width="30%" src={item.Image} />
 
-                            </td><td><Link> </Link>{item.Title} </td> </tr> </Link>);
+                            </td><td>{item.Title} </td></Link> </tr>);
                     })}
                 </table>
             </div>

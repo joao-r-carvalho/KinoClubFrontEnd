@@ -3,6 +3,7 @@ import axios from 'axios';
 import { properties } from '../../Properties.js'
 import '../../Style/Common.css'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { IsFavorite, SetFavorite, RemoveFavorite } from '../../Services/API/Users'
 class MoviePresentation extends React.Component {
     constructor(props) {
         super(props);
@@ -13,9 +14,13 @@ class MoviePresentation extends React.Component {
             MovieTitle: null,
             MovieImageURL: null,
             IsFavorite: false,
-            MovieIdentifier: this.props.MovieId
+            MovieIdentifier: this.props.MovieId,
+            showFavoriteWidget: false,
+            BlockFavoriteCalls: false,
+
         }
         this.ToggleFavoriteStatus = this.ToggleFavoriteStatus.bind(this);
+        this.checkIfFavorite = this.checkIfFavorite.bind(this);
 
     }
     componentDidMount() {
@@ -29,6 +34,11 @@ class MoviePresentation extends React.Component {
                     MovieImageURL: res.data.Image,
                     MovieIdentifier: res.data.MovieIdentifier
                 })
+                //If movie ID was randomly generated this process must be done sequentially
+                if (this.props.MovieId == "") {
+                    this.checkIfFavorite(this.state.MovieIdentifier);
+
+                }
             }, (error) => {
                 this.setState({
                     isLoaded: true,
@@ -36,29 +46,57 @@ class MoviePresentation extends React.Component {
                 })
             }
             )
+        if (this.props.MovieId != "") {
+            this.checkIfFavorite(this.props.MovieId);
+        }
 
+
+    }
+
+    checkIfFavorite(MovieIdentifier) {
+        IsFavorite(MovieIdentifier)
+            .then(response => {
+                if (response.status == 200) {
+                    this.setState({ showFavoriteWidget: true })
+                    return response.json();
+                } else {
+                    this.setState({ IsFavorite: false, showFavoriteWidget: false })
+                    return false;
+                }
+            }).then(json => {
+                this.setState({ IsFavorite: json })
+            }
+            )
     }
     ToggleFavoriteStatus() {
         // alert((this.state.isFavorite? "Removing":  "Adding"  )+ this.state.MovieIdentifier +  " To your favorites") ;
-        fetch(properties.BaseURL + '/' +properties.SetFavoriteMovieURL, {
-            method: 'POST',
-            credentials: 'include',
+        if (this.state.BlockFavoriteCalls) { return; }
+        this.setState({ BlockFavoriteCalls: true });
 
-            headers: {
-                'Accept': '*/*',
-                'Content-Type': 'application/json',
-            }, body: JSON.stringify({
-                "MovieIdentifier": this.state.MovieIdentifier
-            })
-        }).then((response) => {
-            if (response.status == 401) {
-                this.setState({ error: "Please login first" })
-            } else if (response.state == 200) {
-                this.setState(state => ({
-                    IsFavorite: true
-                }))
-            }
-        });
+        if (this.state.IsFavorite) {
+            RemoveFavorite(this.state.MovieIdentifier)
+                .then((response) => {
+                    if (response.status == 200) {
+                        this.setState({
+                            IsFavorite: false,
+                        })
+                    } this.setState({ BlockFavoriteCalls: false });
+                }
+                );
+
+        } else {
+            SetFavorite(this.state.MovieIdentifier)
+                .then((response) => {
+                    if (response.status == 200) {
+                        this.setState({
+                            IsFavorite: true,
+                        })
+                    }
+                    this.setState({ BlockFavoriteCalls: false });
+
+                });
+        }
+
 
 
     }
@@ -75,11 +113,12 @@ class MoviePresentation extends React.Component {
                     <div className="MoviePresentationLeft">
                         <img src={this.state.MovieImageURL} >
                         </img>
-                        <div onClick={this.ToggleFavoriteStatus} className="AddToFavorites Clickable" >
+
+                        <div hidden={!this.state.showFavoriteWidget} onClick={this.ToggleFavoriteStatus} className="AddToFavorites Clickable" >
                             {this.state.IsFavorite ?
                                 <React.Fragment>
                                     <AiFillStar size={32} color="gold" />
-                                    <span>Favorited!</span>
+                                    <span>Is favorite!</span>
                                 </React.Fragment>
                                 : <React.Fragment>
                                     <AiOutlineStar size={32} color="gold" />
